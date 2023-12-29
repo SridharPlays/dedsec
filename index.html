@@ -29,7 +29,6 @@
                 <div class="info">
                     <h2>Dedsec<br><span>Gaming Community</span></h2>
                     <p>This is a server where you can chill out with friends and/or your community. An advanced, yet fully completed, and feature-rich support server. Enjoy Your Stay Here!</p>
-                    <a href="https://discord.gg/3gFcx7maZM" class="info-btn"> More Info</a>
                 </div>
             </div> 
         </section>
@@ -149,6 +148,10 @@ header .logo{
     font-weight: 800;
     letter-spacing: 1px;
 }
+header .logo img:hover {
+  transition: ease-in 0.5s;
+  transform: translate(-5%,-5%);
+}
 
 header h2{
     color: white;
@@ -164,7 +167,7 @@ header .navigation a{
     font-weight: 500;
     padding: 5px 15px;
     border-radius: 5px;
-    transition: 0.5s;
+    transition: 0.9s;
 }
 header .navigation a:not(:last-child)
 {
@@ -195,7 +198,7 @@ header .navigation a:hover{
     color: #fff;
     font-size: 50px;
     transition: 1s ease;
-    transition-delay: 0.5s;
+    transition-delay: 2s;
 }
 
 .content .info p{
@@ -208,22 +211,6 @@ header .navigation a:hover{
     width: 700px;
 }
 
-.content .info-btn{
-    color: #fff;
-    background: #226A80;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 2px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: 0.3s;
-    transition-property: background;
-}
-
-.content .info-btn:hover{
-    background: #0C4F60;
-}
 
 label{
     display: none;
@@ -534,99 +521,3 @@ label{
     <script src="app.js"></script>
 </body>
 </html>
-
-
-
-<script>
-  jQuery(document).ready(function(){
-  jQuery('.toast__close').click(function(e){
-    e.preventDefault();
-    var parent = $(this).parent('.toast');
-    parent.fadeOut("slow", function() { $(this).remove(); } );
-  });
-});
-
-
-function toast() {
-  setTimeout(function() {
-$("toast").show();
-}, 3000);
-}
-</script>
-<style>
-  @import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i');
-
-html, body{
-  font-family: 'Raleway';
-}
-
-.toast__svg{
-  position: absolute;
-  top: 35%;
-  left: 5%;
-}
-
-.toast {
-    text-align:left;
-    position: absolute;
-    top: 100px;
-    left: 65%;
-    padding: 21px 80px;
-    background-color:#fff;
-    border-radius:4px;
-    max-width: 500px;
-    box-shadow: 1px 7px 14px -5px rgba(0,0,0,0.2);
-    margin: 10px;
-}
-
-
-.toast:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 4px;
-    height: 100%;
-    border-top-left-radius:4px;
-    border-bottom-left-radius: 4px;
-
-}
-
-.toast__type {
-  color: #3e3e3e;
-  font-weight: 700;
-  margin-top: 0;
-  margin-bottom: 1px;
-}
-
-.toast__message {
-    font-size: 14px;
-    margin-top: 0;
-    margin-bottom: 0;
-    color: #878787;
-}
-
-.toast__content{
-  padding-left:70px;
-  padding-right:60px;
-}
-
-.toast__close {
-    position: absolute;
-    right: 22px;
-    top: 49%;
-    width: 20px;
-    cursor: pointer;
-    height: 12px;
-    color: #3e3e3e;
-    transform: translateY(-50%);
-}
-
-.toast--yellow .toast__icon{
-  background-color:rgb(255, 0, 0);
-}
-
-.toast--yellow:before{
-  background-color:rgb(255, 0, 0);
-}
-</style>
